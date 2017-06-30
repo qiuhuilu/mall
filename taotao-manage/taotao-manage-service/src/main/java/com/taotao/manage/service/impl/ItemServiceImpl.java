@@ -7,6 +7,8 @@ import com.taotao.manage.pojo.Item;
 import com.taotao.manage.pojo.ItemExample;
 import com.taotao.manage.service.ItemService;
 import com.taotao.pojo.EUIDataGrid;
+import com.taotao.pojo.TaoTaoResult;
+import com.taotao.pojo.TaoTaoStatusType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,5 +56,21 @@ public class ItemServiceImpl implements ItemService {
         result.setTotal((int) pageInfo.getTotal());
         //返回EUIDataGrid数据
         return result;
+    }
+
+    /**
+     * 保存商品
+     * @param item
+     * @return
+     */
+    @Override
+    public TaoTaoResult saveItem(Item item) {
+
+        int count = itemMapper.insert(item);
+        if(count > 0){
+            return TaoTaoResult.ok();
+        }else {
+            return new TaoTaoResult(TaoTaoStatusType.ERROR, "添加商品失败", null);
+        }
     }
 }

@@ -14,7 +14,7 @@ import java.io.InputStream;
  * Created by qiuhl on 2017/6/29.
  */
 public class FTPTest {
-    @Test
+    //@Test
     public void testFtpUpload() throws IOException {
         InputStream inputStream = new FileInputStream(new File("D:\\Users\\qiuhl\\Pictures\\DCIM3.jpg"));
 
@@ -28,11 +28,11 @@ public class FTPTest {
         client.logout();
     }
 
-    @Test
+    //@Test
     public void testUpload() throws FileNotFoundException {
         FtpUtils ftpUtils = new FtpUtils();
         InputStream inputStream = new FileInputStream(new File("D:\\Users\\qiuhl\\Pictures\\DCIM3.jpg"));
-        boolean result = ftpUtils.uploadFile("45.78.30.155", 21,"ftpuser","qiuhuilu","/home/ftpuser/www","/2015/06/29","hello.jpg",inputStream);
+        boolean result = ftpUtils.uploadFile("45.78.30.155", 21,"ftpuser","qiuhuilu","/home/ftpuser/www/images","/2015/06/29","hello.jpg",inputStream);
         System.out.println(result);
     }
 }

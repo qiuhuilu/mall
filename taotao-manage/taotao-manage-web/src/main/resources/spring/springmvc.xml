@@ -12,11 +12,21 @@
     <mvc:annotation-driven/>
     <!--配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀-->
         <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!--后缀-->
         <property name="suffix" value=".jsp"/>
     </bean>
 
     <!--资源映射，注意location最后必须加上/ -->
     <mvc:resources location="/WEB-INF/css/"  mapping="/css/**"/>
     <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+    
+    <!--配置MultipartFile多文件上传解析器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--设置编码格式-->
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+        <property name="maxUploadSize" value="5242880"/>
+    </bean>
 </beans>

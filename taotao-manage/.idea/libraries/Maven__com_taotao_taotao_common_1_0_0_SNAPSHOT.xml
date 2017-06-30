@@ -8,6 +8,8 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/taotao/taotao-common/1.0.0-SNAPSHOT/taotao-common-1.0.0-SNAPSHOT-sources.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/com/taotao/taotao-common" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/taotao/taotao-common/1.0.0-SNAPSHOT/taotao-common-1.0.0-SNAPSHOT.jar!/" />
     </SOURCES>
   </library>
 </component>

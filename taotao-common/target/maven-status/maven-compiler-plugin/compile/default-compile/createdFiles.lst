@@ -1,3 +1,6 @@
+com\taotao\pojo\TaoTaoResult.class
 com\taotao\pojo\EUITreeNode.class
 com\taotao\pojo\EUIDataGrid.class
 com\taotao\util\FtpUtils.class
+com\taotao\util\IDUtils.class
+com\taotao\pojo\TaoTaoStatusType.class
